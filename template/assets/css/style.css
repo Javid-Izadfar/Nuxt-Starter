@@ -1,0 +1,10 @@
+@import '_vars.css';
+@import '_mixins.css';
+
+@import '../../node_modules/postcss-joqd/joqd.css';
+@import '../../node_modules/postcss-gorbeh/gorbeh.css';
+
+@mixin font $farsi-font, 300, $(farsi-font)-Light;
+@mixin font $farsi-font, 400, $(farsi-font)-Regular;
+@mixin font $farsi-font, 500, $(farsi-font)-Medium;
+@mixin font $farsi-font, 700, $(farsi-font)-Bold;

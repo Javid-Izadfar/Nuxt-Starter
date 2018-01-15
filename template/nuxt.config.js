@@ -18,9 +18,16 @@ module.exports = {
   */
   loading: { color: '#3B8070' },
   /*
+  ** Global Styles
+  */
+  css: [
+    '~/assets/css/style.css'
+  ],
+  /*
   ** Build configuration
   */
   build: {
+    extractCSS: true,
     /*
     ** Run ESLint on save
     */
