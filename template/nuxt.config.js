@@ -28,6 +28,24 @@ module.exports = {
   */
   build: {
     extractCSS: true,
+    node: {
+      'child_process': 'empty'
+    },
+    /*
+    ** Shortcuts
+    */
+    extend (config, { isDev, isClient }) {
+      config.node = {
+        'child_process': 'empty',
+        'net': 'empty'
+      }
+      let src = config.resolve.alias['~']
+      config.resolve.alias['~utils'] = path.join(src, 'utils')
+      config.resolve.alias['~config'] = path.join(src, 'config')
+      config.resolve.alias['~store'] = path.join(src, 'store')
+      // create api alias base context
+      config.resolve.alias['create_api'] = process.client ? path.join(src, 'store/api_client.js') : path.join(src, 'store/api_client.js')
+    },
     /*
     ** Run ESLint on save
     */
