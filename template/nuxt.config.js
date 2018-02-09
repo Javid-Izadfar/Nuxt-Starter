@@ -35,6 +35,12 @@ module.exports = {
       }
 
       let src = config.resolve.alias['~']
+
+      config.resolve.alias['~atom'] = path.join(src, 'components/atoms')
+      config.resolve.alias['~molecule'] = path.join(src, 'components/molecules')
+      config.resolve.alias['~organism'] = path.join(src, 'components/organisms')
+      config.resolve.alias['~template'] = path.join(src, 'components/templates')
+
       config.resolve.alias['~utils'] = path.join(src, 'utils')
       config.resolve.alias['~config'] = path.join(src, 'config')
       config.resolve.alias['~store'] = path.join(src, 'store')
