@@ -1,3 +1,6 @@
+const path = require('path')
+const projectRoot = path.resolve(__dirname, '../')
+
 module.exports = {
   /*
   ** Headers of the page
